@@ -26,11 +26,11 @@ import aiofiles
 from discord_buttons_plugin import *
 from colorama import Fore
 
-bot = commands.Bot(command_prefix="m-")
+bot = commands.Bot(command_prefix="m+")
 bot.remove_command("help")
 intents= discord.Intents.default()
 intents.members = True
-prefix = "m-"
+prefix = "m+"
 bot.sniped_messages = {}
 global raid
 raid = True
@@ -45,12 +45,12 @@ for guild in bot.guilds:
 async def help(ctx):
   author = ctx.author
   memberAvatar = author.avatar_url
-  em = discord.Embed(title = "Meow-bot's help command !", description = "m-help for more details.")
-  em.add_field(name = "Fun", value = f"🎰 m-fun for more details.")
-  em.add_field(name = "Moderation", value = "<:TCC_blurpleemployee:917337948062642176> m-mod for more details.")
-  em.add_field(name = "Utility", value = " <:TCC_blurplegift:917337948167471115> m-utility for more details.")
-  em.add_field(name = "NSFW", value = "🔞 m-nsfw for more details.")
-  em.add_field(name = "Giveaway", value = "m-gaws for more details.")
+  em = discord.Embed(title = "Meow-bot's help command !", description = "m+help for more details.")
+  em.add_field(name = "Fun", value = f"🎰 m+fun for more details.")
+  em.add_field(name = "Moderation", value = "<:TCC_blurpleemployee:917337948062642176> m+mod for more details.")
+  em.add_field(name = "Utility", value = " <:TCC_blurplegift:917337948167471115> m+utility for more details.")
+  em.add_field(name = "NSFW", value = "🔞 m+nsfw for more details.")
+  em.add_field(name = "Giveaway", value = "m+gaws for more details.")
   em.set_thumbnail(url=memberAvatar)
   em.set_image(url = 'https://media.giphy.com/media/EOHqVt2BTTvCU/giphy.gif')
   await ctx.send(embed = em)
